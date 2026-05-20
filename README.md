@@ -43,6 +43,13 @@ Following a structured 3-month learning plan:
 
 ---
 
+## 📁 Repository Structure
+
+- `week1-basics/` → Basic inference and first custom training
+  - `Day3_Custom_Training.ipynb`
+  - `Day4_Waste_Detection_Training.ipynb`
+  - `Day5_Gradio_Web_App.ipynb`
+
 
 ## 🚀 How to Run the Notebooks
 
@@ -51,6 +58,16 @@ Following a structured 3-month learning plan:
 3. (Optional) Use GPU: `Runtime` → `Change runtime type` → Select **T4 GPU**
 
 All notebooks are designed to be beginner friendly with detailed comments.
+
+---
+
+## 📌 What I Have Done So Far
+
+- Learned Hugging Face Pipelines
+- Mastered YOLO11 inference
+- Trained custom models using Roboflow datasets
+- Built a Waste Detection model
+- Created interactive web demo with Gradio
 
 ---
 
