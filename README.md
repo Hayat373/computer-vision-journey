@@ -43,20 +43,6 @@ Following a structured 3-month learning plan:
 
 ---
 
-## 📸 Results
-
-![alt text](image.png)
-
-
-**YOLO11 Detection Example:**
-
-![Bus Detection][https://ultralytics.com/images/bus.jpg]
-
-
-
-**More results coming soon...**
-
----
 
 ## 🚀 How to Run the Notebooks
 
