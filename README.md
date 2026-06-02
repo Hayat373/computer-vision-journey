@@ -4,7 +4,7 @@
 This repository documents my journey of learning **Computer Vision** from zero coding experience to building real-world projects using CNNs and YOLO.
 
 **Started:** May 2026  
-**Current Status:** Beginner → Intermediate (Week 1)
+**Current Status:** **Week 1 Completed**
 
 ---
 
@@ -37,6 +37,18 @@ Following a structured 3-month learning plan:
 - [x] Hugging Face Pipelines (Image Classification, Object Detection, Zero-shot)
 - [x] YOLO11 Inference (`yolo11n`, `yolo11s`)
 - [x] Visualization with bounding boxes
+
+## 📌 Completed Projects
+
+### ♻️ Waste Detection System
+- Custom trained **YOLO11s** model
+- Trained on Roboflow dataset
+- Detects plastic, bottles, garbage, etc.
+
+**Features:**
+- Image Detection
+- Web Demo (Gradio)
+- Model Export
 
 ### Week 2: Custom Training (In Progress)
 - Coming soon: Training first custom YOLO model
