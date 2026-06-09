@@ -1,15 +1,15 @@
-# === Large files to ignore ===
+# Large files - Ignore everything big
 *.pt
 *.onnx
 *.pth
 runs/
-models/best*
+models/
 week1-basics/models/
 **/__pycache__/
 .ipynb_checkpoints/
 *.ipynb
 
-# Keep only deployment files
+# Only allow deployment files
 !app.py
 !requirements.txt
 !README.md
