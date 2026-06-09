@@ -1,4 +1,4 @@
-# computer-vision-journey
+<!-- # computer-vision-journey
 
 
 This repository documents my journey of learning **Computer Vision** from zero coding experience to building real-world projects using CNNs and YOLO.
@@ -108,4 +108,31 @@ Feel free to explore, learn together, or suggest improvements.
 
 **"From theory to real projects — documenting my Computer Vision journey one day at a time."**
 
-Made with ❤️ in Addis Ababa, Ethiopia
+Made with ❤️ in Addis Ababa, Ethiopia -->
+
+---
+title: Waste & Vehicle Detector
+emoji: ♻️
+colorFrom: blue
+colorTo: green
+sdk: gradio
+sdk_version: "4.0"
+app_file: app.py
+pinned: false
+---
+
+# 🚀 Smart Object Detection System
+
+This is a **YOLO11** powered object detection app.
+
+- Detects waste, vehicles, and other objects
+- Built as part of my Computer Vision Journey
+
+**Made with ❤️ in Ethiopia**
+
+---
+
+### How to Use
+Upload an image and adjust the confidence threshold.
+
+Check out the full journey: [GitHub Repository](https://github.com/Hayat373/computer-vision-journey)
