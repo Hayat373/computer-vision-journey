@@ -1,9 +1,14 @@
-# Ignore API keys and sensitive files
-*.env
-.env
-**/.env
-**/*secret*
-**/*key*
+# Ignore large files
+*.pt
+*.onnx
+*.pth
+runs/
+models/best.pt
+week1-basics/models/
 **/__pycache__/
-.ipynb_checkpoints/week1-basics/vedio/
-vedio/
+.ipynb_checkpoints/
+*.ipynb
+
+# Only keep small files for deployment
+!app.py
+!requirements.txt
