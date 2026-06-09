@@ -1,14 +1,16 @@
-# Ignore large files
+# Large files to ignore
 *.pt
 *.onnx
 *.pth
 runs/
-models/best.pt
+models/
 week1-basics/models/
 **/__pycache__/
 .ipynb_checkpoints/
 *.ipynb
 
-# Only keep small files for deployment
+# Only allow these for deployment
 !app.py
 !requirements.txt
+!README.md
+!.gitignore
