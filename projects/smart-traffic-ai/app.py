@@ -2,44 +2,89 @@ import gradio as gr
 from ultralytics import YOLO
 import pandas as pd
 from collections import defaultdict
+import os
 
-model = YOLO("models/best.pt")
+model = YOLO("yolo11s.pt")  
+
+
+print("✅ Model loaded successfully!")
 
 def analyze_traffic(video):
+    if video is None:
+        return None, pd.DataFrame({"Vehicle Type": ["Please upload a video"], "Count": [0]})
+    
+    print(f"🚦 Processing video: {video}")
+    
+    # Run tracking
     results = model.track(
         source=video,
-        conf=0.3,
+        conf=0.25,
         iou=0.5,
         tracker="bytetrack.yaml",
         save=True,
         name="traffic_analysis",
-        verbose=False
+        verbose=False,
+        persist=True
     )
     
-    counts = defaultdict(int)
+    # Count unique vehicles using tracking IDs
+    unique_vehicles = defaultdict(set)
     for r in results:
-        for box in r.boxes:
-            cls_name = r.names[int(box.cls)]
-            counts[cls_name] += 1
+        if r.boxes is not None and r.boxes.id is not None:
+            for box, track_id in zip(r.boxes, r.boxes.id):
+                cls_name = r.names[int(box.cls)]
+                unique_vehicles[cls_name].add(int(track_id))
     
-    df = pd.DataFrame(list(counts.items()), columns=["Vehicle", "Count"])
-    df = df.sort_values(by="Count", ascending=False)
+    counts = {cls: len(ids) for cls, ids in unique_vehicles.items()}
     
-    output_video = f"runs/detect/traffic_analysis/{video.name.split('/')[-1]}"
+    df = pd.DataFrame(list(counts.items()), columns=["Vehicle Type", "Count"])
+    df = df.sort_values(by="Count", ascending=False).reset_index(drop=True)
     
-    return output_video, df
+    # Get output video path
+    output_dir = "runs/detect/traffic_analysis"
+    output_video = None
+    if os.path.exists(output_dir):
+        video_files = [f for f in os.listdir(output_dir) if f.endswith(('.mp4', '.avi'))]
+        if video_files:
+            output_video = os.path.join(output_dir, video_files[-1])
+    
+    if output_video and os.path.exists(output_video):
+        return output_video, df
+    else:
+        # Fallback: return original video
+        return video, df
 
-with gr.Blocks(title="Smart Traffic AI") as demo:
+
+# ====================== GRADIO INTERFACE ======================
+with gr.Blocks(title="🚦 Smart Traffic AI", theme=gr.themes.Soft()) as demo:
     gr.Markdown("# 🚦 Smart Traffic AI System")
-    gr.Markdown("### Vehicle Detection • Tracking • Analytics")
-    
-    video_input = gr.Video(label="Upload Traffic Video")
-    btn = gr.Button("Analyze", variant="primary")
-    
-    with gr.Row():
-        output_video = gr.Video(label="Processed Video")
-        output_table = gr.DataFrame(label="Vehicle Count")
-    
-    btn.click(analyze_traffic, inputs=video_input, outputs=[output_video, output_table])
+    gr.Markdown("**YOLO11s + ByteTrack** • Vehicle Detection, Tracking & Analytics")
+    gr.Markdown("**Note:** Currently using pre-trained YOLO11s. Custom model coming soon!")
 
-demo.launch()
+    with gr.Row():
+        with gr.Column(scale=1):
+            video_input = gr.Video(
+                label="📹 Upload Traffic Video",
+                height=500,
+                sources=["upload"]
+            )
+            analyze_btn = gr.Button("🚀 Analyze Video", variant="primary", size="large")
+        
+        with gr.Column(scale=1):
+            output_video = gr.Video(
+                label="🎥 Processed Video with Tracking",
+                height=500
+            )
+    
+    gr.Markdown("### 📊 Vehicle Count Report")
+    output_table = gr.DataFrame(label="Detection Summary", headers=["Vehicle Type", "Count"])
+    
+    analyze_btn.click(
+        fn=analyze_traffic,
+        inputs=video_input,
+        outputs=[output_video, output_table]
+    )
+
+    gr.Markdown("---\nMade as part of Computer Vision Journey")
+
+demo.launch(share=True)
