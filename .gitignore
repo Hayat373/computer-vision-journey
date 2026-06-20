@@ -1,16 +1,5 @@
-# Large files - Ignore everything big
+__pycache__/
+runs/
 *.pt
 *.onnx
-*.pth
-runs/
-models/
-week1-basics/models/
-**/__pycache__/
-.ipynb_checkpoints/
-*.ipynb
-
-# Only allow deployment files
-!app.py
-!requirements.txt
-!README.md
-!.gitignore
+.DS_Store
