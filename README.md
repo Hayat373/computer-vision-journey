@@ -1,102 +1,96 @@
-# computer-vision-journey
+# Computer Vision Journey 🚀
 
-
-This repository documents my journey of learning **Computer Vision** from zero coding experience to building real-world projects using CNNs and YOLO.
+This repository documents my journey of learning **Computer Vision** from zero coding experience to building real-world projects using CNNs and YOLO11.
 
 **Started:** May 2026  
-**Current Status:** **Week 1 Completed**
+**Current Status:** **Week 3 Completed**
 
 ---
 
 ## 📌 About This Repository
 
-I am learning modern Computer Vision with a focus on practical skills that can lead to **freelance work, hackathons, and jobs**.
+I am systematically learning modern Computer Vision with a strong focus on **practical skills**.
 
-Following a structured 3-month learning plan:
-- Understanding CNNs & modern architectures
-- Mastering **YOLO11** (object detection)
-- Custom model training
-- Model deployment & web apps
-- Building portfolio projects
+Following a structured 3-month learning plan.
 
 ---
 
-## 🛠 Technologies I'm Learning
+## 🛠 Technologies & Tools
 
-- **Hugging Face Transformers**
-- **Ultralytics YOLO11** (YOLOv11)
-- Google Colab
-- Roboflow (for datasets)
-- Gradio / Streamlit (for web demos)
+- **Ultralytics YOLO11** (Detection, Segmentation, Pose, Tracking)
+- Hugging Face Transformers & CLIP
+- Roboflow (Datasets)
+- Gradio & Streamlit (Web Demos)
+- Model Optimization (ONNX, Quantization)
 
 ---
 
-## 📂 Current Projects / Notebooks
+## 📂 Progress Overview
 
-### Week 1: Basics & Inference
-- [x] Hugging Face Pipelines (Image Classification, Object Detection, Zero-shot)
-- [x] YOLO11 Inference (`yolo11n`, `yolo11s`)
-- [x] Visualization with bounding boxes
+### Week 1: Foundations
+- Hugging Face Pipelines
+- YOLO11 Inference & Visualization
+- First Custom Training
+
+### Week 2: Custom Projects
+- Waste Detection System
+- Vehicle Detection
+- Tracking & Counting
+
+### Week 3: Advanced Topics (Completed)
+- Instance Segmentation Analysis
+- Pose Estimation
+- Action Recognition
+- Zero-Shot Detection (CLIP + YOLO)
+- Model Quantization & Optimization
+- Anomaly Detection
+
+---
 
 ## 📌 Completed Projects
 
-### ♻️ Waste Detection System
-- Custom trained **YOLO11s** model
-- Trained on Roboflow dataset
-- Detects plastic, bottles, garbage, etc.
-
-**Features:**
-- Image Detection
-- Web Demo (Gradio)
-- Model Export
-
-### Week 2: Custom Training (In Progress)
-- Coming soon: Training first custom YOLO model
+- **Waste Detection System** — Custom trained model + Gradio demo
+- **Vehicle Detection & Tracking** — With counting system
+- **Advanced Pose Estimation & Action Recognition**
+- **Text-Guided Zero-Shot Detection** (Multi-Modal)
+- **Instance Segmentation** with area & color analysis
+- **Anomaly Detection** in videos
 
 ---
-
-## 📁 Repository Structure
-
-- `week1-basics/` → Basic inference and first custom training
-  - `Day3_Custom_Training.ipynb`
-  - `Day4_Waste_Detection_Training.ipynb`
-  - `Day5_Gradio_Web_App.ipynb`
-
 
 ## 🚀 How to Run the Notebooks
 
-1. Open any notebook in **Google Colab**
+All notebooks are designed to run in **Google Colab** (with GPU).
+
+1. Open any notebook
 2. Go to `Runtime` → `Run all`
-3. (Optional) Use GPU: `Runtime` → `Change runtime type` → Select **T4 GPU**
-
-All notebooks are designed to be beginner friendly with detailed comments.
+3. (Optional) Change runtime type to **T4 GPU**
 
 ---
 
-## 📌 What I Have Done So Far
+## 📌 What I Have Done So Far (End of Week 3)
 
-- Learned Hugging Face Pipelines
-- Mastered YOLO11 inference
-- Trained custom models using Roboflow datasets
-- Built a Waste Detection model
-- Created interactive web demo with Gradio
+- Mastered YOLO11 (Detection, Segmentation, Pose, Tracking)
+- Built multiple real-world projects
+- Learned Model Optimization & Quantization
+- Implemented Multi-Modal (Text + Image) systems
+- Gained strong understanding of Action Recognition and Anomaly Detection
 
 ---
 
-## 📌 Goals for Next 3 Months
+## 📌 Goals for Next Weeks (Week 4+)
 
-- Master custom YOLO model training
-- Build 5+ real-world projects (Agriculture, Traffic, Retail, Security, etc.)
-- Deploy models as web apps (Hugging Face Spaces)
-
+- Build 2–3 more strong portfolio projects
+- Full model deployment (Hugging Face Spaces + API)
+- Participate in AI Hackathons
+- Start applying for freelance gigs and junior Computer Vision roles
 
 ---
 
 ## 🤝 Connect With Me
 
-- LinkedIn: [https://www.linkedin.com/in/hayat-ahmedjara]
-- Email: [hayahmam3@gmail.com]
-
+- LinkedIn: [https://www.linkedin.com/in/hayat-ahmedjara](https://www.linkedin.com/in/hayat-ahmedjara)
+- Email: hayahmam3@gmail.com
 
 ---
 
@@ -106,6 +100,6 @@ Feel free to explore, learn together, or suggest improvements.
 
 ---
 
-**"From theory to real projects — documenting my Computer Vision journey one day at a time."**
+**"From zero coding to building advanced Computer Vision systems — documenting my journey one day at a time."**
 
 Made with ❤️ in Addis Ababa, Ethiopia
