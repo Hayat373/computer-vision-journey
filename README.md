@@ -2,8 +2,7 @@
 
 This repository documents my journey of learning **Computer Vision** from zero coding experience to building real-world projects using CNNs and YOLO11.
 
-**Started:** May 2026  
-**Current Status:** **Week 3 Completed**
+**Started:** May 202**Week 4 In Progress**
 
 ---
 
@@ -18,11 +17,11 @@ Following a structured 3-month learning plan.
 ## 🛠 Technologies & Tools
 
 - **Ultralytics YOLO11** (Detection, Segmentation, Pose, Tracking)
-- Hugging Face Transformers & CLIP
+- Depth-Anything V2 (Depth Estimation)
+- MediaPipe & OpenCV
 - Roboflow (Datasets)
-- Gradio & Streamlit (Web Demos)
-- Model Optimization (ONNX, Quantization)
-
+- Gradio (Web Demos)
+- Hugging Face
 ---
 
 ## 📂 Progress Overview
@@ -45,18 +44,38 @@ Following a structured 3-month learning plan.
 - Model Quantization & Optimization
 - Anomaly Detection
 
----
+### Week 4: 3D Understanding
+- **Depth Estimation + Distance Calculation** (YOLO11 + Depth-Anything V2)
 
-## 📌 Completed Projects
-
-- **Waste Detection System** — Custom trained model + Gradio demo
-- **Vehicle Detection & Tracking** — With counting system
-- **Advanced Pose Estimation & Action Recognition**
-- **Text-Guided Zero-Shot Detection** (Multi-Modal)
-- **Instance Segmentation** with area & color analysis
-- **Anomaly Detection** in videos
 
 ---
+
+## 📌 Featured Projects & Results
+
+### 1. Smart Traffic AI
+- Vehicle detection, tracking & counting
+- Live Demo: [Hugging Face Space](https://huggingface.co/spaces/Hayat373/smart-traffic-ai)
+
+### 2. Pose Estimation
+![Pose Estimation Result](results/pose.png)
+
+### 3. Depth Estimation + Distance
+![Depth Estimation Result](results/depth_estimation.png)
+
+---
+## 📂 Repository Structure
+
+
+computer-vision-journey/
+├── week1-basics/
+├── week2-projects/
+├── week3-advanced/
+├── week4-depth/
+├── results/                  ← Screenshots & Results
+├── projects/                 ← Polished projects (moved to cv-portfolio later)
+└── README.md
+
+
 
 ## 🚀 How to Run the Notebooks
 
@@ -66,25 +85,15 @@ All notebooks are designed to run in **Google Colab** (with GPU).
 2. Go to `Runtime` → `Run all`
 3. (Optional) Change runtime type to **T4 GPU**
 
----
-
-## 📌 What I Have Done So Far (End of Week 3)
-
-- Mastered YOLO11 (Detection, Segmentation, Pose, Tracking)
-- Built multiple real-world projects
-- Learned Model Optimization & Quantization
-- Implemented Multi-Modal (Text + Image) systems
-- Gained strong understanding of Action Recognition and Anomaly Detection
 
 ---
 
-## 📌 Goals for Next Weeks (Week 4+)
+## 📌 Goals for Next 4 Weeks
 
-- Build 2–3 more strong portfolio projects
-- Full model deployment (Hugging Face Spaces + API)
-- Participate in AI Hackathons
-- Start applying for freelance gigs and junior Computer Vision roles
-
+- Build 3 strong portfolio projects
+- Improve model deployment skills
+- Participate in AI hackathons
+- Prepare for freelance and junior CV roles
 ---
 
 ## 🤝 Connect With Me
