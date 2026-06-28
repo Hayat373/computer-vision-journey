@@ -72,8 +72,8 @@ computer-vision-journey/
 ├── week2-projects/
 ├── week3-advanced/
 ├── week4-depth/
-├── results/                  ← Screenshots & Results
-├── projects/                 ← Polished projects (moved to cv-portfolio later)
+├── results/                  
+├── projects/                 
 └── README.md
 ```
 
