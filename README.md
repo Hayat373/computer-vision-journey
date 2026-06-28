@@ -46,8 +46,9 @@ Following a structured 3-month learning plan.
 
 ### Week 4: 3D Understanding
 - **Depth Estimation + Distance Calculation** (YOLO11 + Depth-Anything V2)
-
-
+- Instance_Segmentation_Area_Analysis
+- Thermal Image Object Detection
+- Multi-Camera Tracking 
 ---
 
 ## 📌 Featured Projects & Results
@@ -65,7 +66,7 @@ Following a structured 3-month learning plan.
 ---
 ## 📂 Repository Structure
 
-
+```
 computer-vision-journey/
 ├── week1-basics/
 ├── week2-projects/
@@ -74,6 +75,7 @@ computer-vision-journey/
 ├── results/                  ← Screenshots & Results
 ├── projects/                 ← Polished projects (moved to cv-portfolio later)
 └── README.md
+```
 
 
 
